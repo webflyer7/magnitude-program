@@ -1,0 +1,21 @@
+from tkinter import *
+window = Tk()
+window.configure(bg = "yellow")
+n1 = IntVar()
+n2 = IntVar()
+n3 = IntVar()
+def volume():
+    m1 = n1.get()
+    m2 = n2.get()
+    m3 = n3.get() 
+    m4 = m1*m2*m3
+    label = Label(window , text = "Volume is %d" %m4 , bg = "yellow").place(relx = 0.3 , rely = 0.75)
+label2 = Label(window , text = "Length" , bg = "yellow").place(relx = 0 , rely = 0.3)
+entry1 = Entry(window , textvar = n1).place(relx  = 0.3 , rely = 0.3)
+label3 = Label(window ,text = "Breadth" , bg = "yellow").place(relx = 0 ,rely =  0.4)
+entry2 = Entry(window , textvar = n2).place(relx = 0.3 , rely = 0.4)
+label4 = Label(window , text = "Height", bg = "yellow").place(relx = 0 , rely = 0.5)
+entry3 = Entry(window , textvar = n3).place(relx = 0.3 ,  rely = 0.5)
+button1 = Button(window , text  = "Volume" , command = volume).place(relx = 0.5 , rely = 0.6)
+window.geometry("200x200")
+window.mainloop()
